@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+<product productCode="01500801" productStatus="ACTIVE">
+<imageAndColor>
+<![CDATA[[{"color":"//fgl.scene7.com/is/image/FGLEPAMQA/01500801_01500801_SWATCH_1_75","imageUrl":"//fgl.scene7.com/is/image/FGLEPAMQA/01500801_01500801_PROD_1_75","colorValue":"75","colorTitle":"TAN","images":["//fgl.scene7.com/is/image/FGLEPAMQA/01500801_01500801_PROD_1_75"]}]]]>
+</imageAndColor>
+</product>
+<product productCode="01500802" productStatus="ACTIVE">
+<imageAndColor>
+<![CDATA[[{"color":"//fgl.scene7.com/is/image/FGLEPAMQA/01500802_01500802_SWATCH_1_01","imageUrl":"//fgl.scene7.com/is/image/FGLEPAMQA/01500802_01500802_PROD_1_01","colorValue":"01","colorTitle":"BLACK","images":["//fgl.scene7.com/is/image/FGLEPAMQA/01500802_01500802_PROD_1_01"]}]]]>
+</imageAndColor>
+</product>
+</products>
