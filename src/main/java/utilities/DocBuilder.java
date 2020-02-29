@@ -16,6 +16,7 @@ public class DocBuilder {
 			builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			this.file = file;
 		} catch (Exception e) {
+			System.out.println("Kya mai yahan pahuncha?");
 			e.printStackTrace();
 		}
 	}
