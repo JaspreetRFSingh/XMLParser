@@ -1,8 +1,14 @@
 package parsers;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
+import com.fasterxml.jackson.core.JsonParser;
+import com.fasterxml.jackson.databind.util.JSONPObject;
+import jdk.nashorn.internal.parser.JSONParser;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -26,7 +32,7 @@ public class ProductParser {
 		try {
 			NodeList nodes = document.getElementsByTagName("product");
 			int numberOfNodes = nodes.getLength();
-
+			System.out.println("Number of products: "+numberOfNodes);
 			for (int i = 0; i < numberOfNodes; i++) {
 				Element element = (Element) nodes.item(i);
 				NodeList imageAndColor = element.getElementsByTagName("imageAndColor");
@@ -35,11 +41,11 @@ public class ProductParser {
 				int prodCode = Integer.parseInt(productCode.getNodeValue());
 				String prodStatus = productStatus.getNodeValue();
 				String line = imageAndColor.item(0).getTextContent();
-				
-				//Converting JSON to pojo
-				ImageAndColor iac = new ObjectMapper().readValue(line.substring(2, line.length() - 2),ImageAndColor.class);
-				
-				Product product = new Product(prodCode, prodStatus, iac);
+
+				ObjectMapper objectMapper = new ObjectMapper();
+				List<ImageAndColor> imagesAndColors = Arrays.asList(objectMapper.readValue(line,ImageAndColor[].class));
+
+				Product product = new Product(prodCode, prodStatus, imagesAndColors);
 				products.add(product);
 
 			}

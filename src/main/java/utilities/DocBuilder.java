@@ -16,18 +16,16 @@ public class DocBuilder {
 			builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
 			this.file = file;
 		} catch (Exception e) {
-			System.out.println("Kya mai yahan pahuncha?");
 			e.printStackTrace();
 		}
 	}
 	
 	public Document getDocument() {
-		System.out.println("--  "+file.getName());
-		System.out.println(builder);
+		System.out.println("File read: "+file.getName());
+
 		try {
 			document = builder.parse(file);
 		} catch (Exception e) {
-			System.out.println("Yahan exception throw ho rahi hai");
 			document = null;
 		} 
 		return document;

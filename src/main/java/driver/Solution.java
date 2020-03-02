@@ -14,7 +14,7 @@ public class Solution {
 	public static void main(String[] args) {
 		
 
-		File file = new File("../XMLParser/src/main/resources/productFeedAlter.xml");
+		File file = new File("../XMLParser/src/main/resources/productFeed.xml");
 		DocBuilder docBuilder = new DocBuilder(file);
 		Document document = docBuilder.getDocument();
 		ProductParser productParser = new ProductParser();
